@@ -13,6 +13,7 @@ public class Crime {
     public Crime() {
         this.mId = UUID.randomUUID();
         this.mDate = new Date();
+        this.mRequiresPolice = true;
     }
 
     public UUID getId() {
