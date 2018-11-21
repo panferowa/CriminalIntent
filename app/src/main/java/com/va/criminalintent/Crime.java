@@ -8,12 +8,14 @@ public class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
-    private boolean mRequiresPolice;
 
     public Crime() {
-        this.mId = UUID.randomUUID();
-        this.mDate = new Date();
-        this.mRequiresPolice = true;
+        this(UUID.randomUUID());
+    }
+
+    public Crime(UUID id) {
+        mId = id;
+        mDate = new Date();
     }
 
     public UUID getId() {
@@ -42,13 +44,5 @@ public class Crime {
 
     public void setSolved(boolean mSolved) {
         this.mSolved = mSolved;
-    }
-
-    public boolean ismRequiresPolice() {
-        return mRequiresPolice;
-    }
-
-    public void setmRequiresPolice(boolean mRequiresPolice) {
-        this.mRequiresPolice = mRequiresPolice;
     }
 }
