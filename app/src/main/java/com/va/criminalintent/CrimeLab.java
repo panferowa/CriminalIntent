@@ -11,7 +11,6 @@ import java.util.UUID;
 
 import database.CrimeBaseHelper;
 import database.CrimeCursorWrapper;
-import database.CrimeDbSchema;
 import database.CrimeDbSchema.CrimeTable;
 
 public class CrimeLab {
@@ -80,6 +79,7 @@ public class CrimeLab {
         values.put(CrimeTable.Cols.TITLE, crime.getTitle());
         values.put(CrimeTable.Cols.DATE, crime.getDate().getTime());
         values.put(CrimeTable.Cols.SOLVED, crime.isSolved() ? 1 : 0);
+        values.put(CrimeTable.Cols.SUSPECT, crime.getSuspect());
         return values;
     }
 
